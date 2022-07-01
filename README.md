@@ -34,14 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-sub2ind
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@esm/index.mjs';
+var sub2ind = require( '@stdlib/ndarray-sub2ind' );
 ```
 
 #### sub2ind( shape, ...subscripts\[, options] )
@@ -128,14 +144,9 @@ var idx = sub2ind( shape, -2, 10, -1, opts );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@esm/index.mjs';
-import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@esm/index.mjs';
+```javascript
+var numel = require( '@stdlib/ndarray-base-numel' );
+var sub2ind = require( '@stdlib/ndarray-sub2ind' );
 
 var shape = [ 3, 3, 3 ];
 var len = numel( shape );
@@ -176,10 +187,6 @@ for ( k = 0; k < shape[ 2 ]; k++ ) {
     }
     console.log( '' );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -219,7 +226,7 @@ for ( k = 0; k < shape[ 2 ]; k++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -275,16 +282,17 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/ndarray-sub2ind/tree/deno
 [umd-url]: https://github.com/stdlib-js/ndarray-sub2ind/tree/umd
 [esm-url]: https://github.com/stdlib-js/ndarray-sub2ind/tree/esm
+[branches-url]: https://github.com/stdlib-js/ndarray-sub2ind/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-sub2ind/main/LICENSE
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array/tree/esm
+[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/ind2sub]: https://github.com/stdlib-js/ndarray-ind2sub/tree/esm
+[@stdlib/ndarray/ind2sub]: https://github.com/stdlib-js/ndarray-ind2sub
 
 <!-- </related-links> -->
 
