@@ -46,7 +46,7 @@
     "@stdlib/ndarray-base-assert-is-order": "^0.0.x",
     "@stdlib/ndarray-base-shape2strides": "^0.0.x",
     "@stdlib/ndarray-base-sub2ind": "^0.0.x",
-    "@stdlib/string-format": "^0.0.x",
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.x",
     "@stdlib/types": "^0.0.x"
   },
   "devDependencies": {
