@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@deno/mod.js';
+import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@v0.1.0-deno/mod.js';
 ```
 
 #### sub2ind( shape, ...subscripts\[, options] )
@@ -141,7 +141,7 @@ var idx = sub2ind( shape, -2, 10, -1, opts );
 
 ```javascript
 import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@deno/mod.js';
-import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@deno/mod.js';
+import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@v0.1.0-deno/mod.js';
 
 var shape = [ 3, 3, 3 ];
 var len = numel( shape );
