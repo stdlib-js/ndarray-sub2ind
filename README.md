@@ -45,19 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-sub2ind
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-sub2ind/tags). For example,
-
-```javascript
-import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@v0.1.0-esm/index.mjs';
+var sub2ind = require( '@stdlib/ndarray-sub2ind' );
 ```
 
 #### sub2ind( shape, ...subscripts\[, options] )
@@ -144,14 +155,9 @@ var idx = sub2ind( shape, -2, 10, -1, opts );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@esm/index.mjs';
-import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@esm/index.mjs';
+```javascript
+var numel = require( '@stdlib/ndarray-base-numel' );
+var sub2ind = require( '@stdlib/ndarray-sub2ind' );
 
 var shape = [ 3, 3, 3 ];
 var len = numel( shape );
@@ -192,10 +198,6 @@ for ( k = 0; k < shape[ 2 ]; k++ ) {
     }
     console.log( '' );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -235,7 +237,7 @@ for ( k = 0; k < shape[ 2 ]; k++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -265,8 +267,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-sub2ind.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-sub2ind
 
-[test-image]: https://github.com/stdlib-js/ndarray-sub2ind/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/ndarray-sub2ind/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/ndarray-sub2ind/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/ndarray-sub2ind/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-sub2ind/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-sub2ind?branch=main
@@ -297,11 +299,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array/tree/esm
+[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/ind2sub]: https://github.com/stdlib-js/ndarray-ind2sub/tree/esm
+[@stdlib/ndarray/ind2sub]: https://github.com/stdlib-js/ndarray-ind2sub
 
 <!-- </related-links> -->
 
