@@ -45,38 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-sub2ind
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-sub2ind = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var sub2ind = require( 'path/to/vendor/umd/ndarray-sub2ind/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.sub2ind;
-})();
-</script>
+var sub2ind = require( '@stdlib/ndarray-sub2ind' );
 ```
 
 #### sub2ind( shape, ...subscripts\[, options] )
@@ -92,15 +84,16 @@ var idx = sub2ind( shape, 1, 0 );
 
 The function supports the following `options`:
 
--   `mode`: specifies how to handle subscripts which exceed array dimensions. The following modes are supported:
+-   **mode**: specifies how to handle subscripts which exceed array dimensions. The following modes are supported:
 
     -   `throw`: specifies that the function should throw an error when a subscript exceeds array dimensions.
+    -   `normalize`: specifies that the function should normalize negative subscripts and throw an error when a subscript exceeds array dimensions.
     -   `wrap`: specifies that the function should wrap around subscripts exceeding array dimensions using modulo arithmetic.
     -   `clamp`: specifies that the function should set subscripts exceeding array dimensions to either `0` (minimum index) or the maximum index along a particular dimension.
 
     If provided a `mode` array, each array element corresponds to a dimension. If provided fewer modes than dimensions, the function reuses modes using modulo arithmetic. Default: `[ 'throw' ]`.
 
--   `order`: specifies whether an array is `row-major` (C-style) or `column-major` (Fortran-style). Default: `'row-major'`.
+-   **order**: specifies whether an array is `row-major` (C-style) or `column-major` (Fortran-style). Default: `'row-major'`.
 
 By default, the function assumes a row-major array. To return a linear index for a column-major array, set the `order` option.
 
@@ -163,14 +156,9 @@ var idx = sub2ind( shape, -2, 10, -1, opts );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var numel = require( '@stdlib/ndarray-base-numel' );
+var sub2ind = require( '@stdlib/ndarray-sub2ind' );
 
 var shape = [ 3, 3, 3 ];
 var len = numel( shape );
@@ -211,11 +199,6 @@ for ( k = 0; k < shape[ 2 ]; k++ ) {
     }
     console.log( '' );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -317,11 +300,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array/tree/umd
+[@stdlib/ndarray/array]: https://github.com/stdlib-js/ndarray-array
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor/tree/umd
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
 
-[@stdlib/ndarray/ind2sub]: https://github.com/stdlib-js/ndarray-ind2sub/tree/umd
+[@stdlib/ndarray/ind2sub]: https://github.com/stdlib-js/ndarray-ind2sub
 
 <!-- </related-links> -->
 
