@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/ndarray-sub2ind/tags). For example,
+
+```javascript
 import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@v0.2.2-deno/mod.js';
 ```
 
@@ -142,7 +147,7 @@ var idx = sub2ind( shape, -2, 10, -1, opts );
 
 ```javascript
 import numel from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-numel@deno/mod.js';
-import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@v0.2.2-deno/mod.js';
+import sub2ind from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-sub2ind@deno/mod.js';
 
 var shape = [ 3, 3, 3 ];
 var len = numel( shape );
